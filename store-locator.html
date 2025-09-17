@@ -1,1 +1,37 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Store Locator</title><link rel="stylesheet" href="styles.css"/></head><body class="page-store"><header class="site-header"><div class="container header-inner"><a href="index.html" class="logo"><img src="images/logo.png" alt="Bata"></a><nav class="main-nav"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link">Products</a><a href="about.html" class="nav-link">About</a><a href="store-locator.html" class="nav-link active">Store</a><a href="promotions.html" class="nav-link">Promos</a><a href="contact.html" class="nav-link">Contact</a></nav></div></header><main class="container"><h1>Stores</h1><ul class="stores"><li><strong>Harare</strong> – Julius Nyerere Way</li><li><strong>Bulawayo</strong> – Jason Moyo Ave</li><li><strong>Gweru</strong> – Main St</li></ul><img src="images/map.jpg" alt="Map" class="map-img"></main><footer class="site-footer"><div class="container"><p>&copy; 2025 Bata Shoe Company Zimbabwe</p></div></footer><script src="js/script.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Store Locator</title><link rel="stylesheet" href="styles.css"/></head><body class="page-store"><header class="site-header"><div class="container header-inner"><a href="index.html" class="logo"><img src="logo shoe.jpg" alt="Bata"></a><nav class="main-nav"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link">Products</a><a href="about.html" class="nav-link">About</a><a href="store-locator.html" class="nav-link active">Store</a><a href="promotions.html" class="nav-link">Promos</a><a href="contact.html" class="nav-link">Contact</a></nav></div></header> <main class="container">
+    <h1>Find Our Stores</h1>
+    <p>Use the interactive map below to locate Bata retail outlets across Zimbabwe.</p>
+    <div id="map"></div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Bata Shoe Company Zimbabwe. All rights reserved.</p>
+      <p>Contact: +263 123 4567 | info@bata.co.zw</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([-17.8249, 31.0530], 7); // Zimbabwe center
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Example store locations with markers
+    const stores = [
+      { name: "Bata Harare", coords: [-17.8292, 31.0522] },
+      { name: "Bata Bulawayo", coords: [-20.1324, 28.6265] },
+      { name: "Bata Mutare", coords: [-18.9707, 32.6700] }
+    ];
+
+    stores.forEach(store => {
+      L.marker(store.coords).addTo(map)
+        .bindPopup(`<b>${store.name}</b>`)
+        .openPopup();
+    });
+  </script>
+</body>
+</html>
