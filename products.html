@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Products</title><link rel="stylesheet" href="styles.css"/></head><body class="page-products"><header class="site-header"><div class="container header-inner"><a href="index.html" class="logo"><img src="bata shoes.jpg" alt="Bata"></a><nav class="main-nav"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link active">Products</a><a href="about.html" class="nav-link">About</a><a href="store-locator.html" class="nav-link">Store</a><a href="promotions.html" class="nav-link">Promos</a><a href="contact.html" class="nav-link">Contact</a><button id="cartBtn" class="cart-btn"><i class="fa fa-shopping-cart"></i> <span id="cartCount">0</span></button></nav></div></header><main class="container"><h1>Products</h1><div id="productGrid" class="product-grid"></div></main><footer class="site-footer"><div class="container"><p>&copy; 2025 Bata Shoe Company Zimbabwe</p></div></footer><div id="cartModal" class="modal"><div class="modal-content"><span class="close" id="closeCart">&times;</span><h2>Your Cart</h2><div id="cartItems"></div><div class="cart-actions"><strong>Total: $<span id="cartTotal">0</span></strong><button id="checkoutBtn" class="btn">Checkout</button></div></div></div><script src="js/cart.js"></script><script src="js/script.js"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Products</title><link rel="stylesheet" href="styles.css"/></head><body class="page-products"><header class="site-header"><div class="container header-inner"><a href="index.html" class="logo"><img src="bata shoes.jpg" alt="Bata"></a><nav class="main-nav"><a href="index.html" class="nav-link">Home</a><a href="products.html" class="nav-link active">Products</a><a href="about.html" class="nav-link">About</a><a href="store-locator.html" class="nav-link">Store</a><a href="promotions.html" class="nav-link">Promos</a><a href="contact.html" class="nav-link">Contact</a><button id="cartBtn" class="cart-btn"><i class="fa fa-shopping-cart"></i> <span id="cartCount">0</span></button></nav></div></header>
+  <main class="container">
+    <h1>Our Products</h1>
+
+    <div class="filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="men">Men</button>
+      <button class="filter-btn" data-category="women">Women</button>
+      <button class="filter-btn" data-category="children">Children</button>
+    </div>
+
+    <section id="productGrid" class="product-grid">
+      <!-- Product cards will go here -->
+      <article class="product-card men">
+        <img src="https://happygentleman.com/wp-content/uploads/2019/11/80058-6-mens-shoes-black2.jpg" alt="Men's Running Shoes" />
+        <h3>Men's Running Shoes</h3>
+        <p>Comfortable and durable running shoes.</p>
+        <p>Sizes: 7-12</p>
+        <p class="price">$50</p>
+        <button class="add-to-cart" data-id="1" data-name="Men's Running Shoes" data-price="50">Add to Cart</button>
+      </article>
+
+      <article class="product-card women">
+        <img src="https://images.pexels.com/photos/949590/pexels-photo-949590.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Women's Sandals" />
+        <h3>Women's Sandals</h3>
+        <p>Stylish sandals for casual wear.</p>
+        <p>Sizes: 5-10</p>
+        <p class="price">$35</p>
+        <button class="add-to-cart" data-id="2" data-name="Women's Sandals" data-price="35">Add to Cart</button>
+      </article>
+
+      <article class="product-card children">
+        <img src="https://st3.depositphotos.com/1177973/13045/i/950/depositphotos_130455748-stock-photo-colorful-kids-shoes.jpg" alt="Children's Sneakers" />
+        <h3>Children's Sneakers</h3>]
+        <p>Durable sneakers for active kids.</p>
+        <p>Sizes: 1-5</p>
+        <p class="price">$30</p>
+        <button class="add-to-cart" data-id="3" data-name="Children's Sneakers" data-price="30">Add to Cart</button>
+      </article>
+    </section>
+  </main><footer class="site-footer"><div class="container"><p>&copy; 2025 Bata Shoe Company Zimbabwe</p></div></footer><div id="cartModal" class="modal"><div class="modal-content"><span class="close" id="closeCart">&times;</span><h2>Your Cart</h2><div id="cartItems"></div><div class="cart-actions"><strong>Total: $<span id="cartTotal">0</span></strong><button id="checkoutBtn" class="btn">Checkout</button></div></div></div><script src="js/cart.js"></script><script src="js/script.js"></script></body></html>
